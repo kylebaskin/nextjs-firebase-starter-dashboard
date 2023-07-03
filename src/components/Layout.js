@@ -73,20 +73,18 @@ return (
           </Link>
         </Navbar.Brand>
         <div className="d-flex align-items-center">
+            {isMarketing && <PublicMenu user={user} />}
+            {user && (
+                <Dropdown>
+                    <Dropdown.Toggle id="dropdown-custom-components" className={`${isMarketing && 'd-none d-md-flex'} d-flex align-items-center bg-transparent border-0`}>
+                    <p className="text-info m-0 d-none d-md-block">{user.email}</p><i className={`bg-white p-2 bi bi-person ms-2 rounded-5 text-dark ${styles.profilePic}`} />
+                    </Dropdown.Toggle>
 
-        {isMarketing && <PublicMenu user={user} />}
-        {user && (
-            <Dropdown>
-                <Dropdown.Toggle id="dropdown-custom-components" className={`${isMarketing && 'd-none d-md-flex'} d-flex align-items-center bg-transparent border-0`}>
-                <p className="text-info m-0 d-none d-md-block">{user.email}</p><i className={`bg-white p-2 bi bi-person ms-2 rounded-5 text-dark ${styles.profilePic}`} />
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu align="end">
-                <Dropdown.Item eventKey="1">Dropdown link 1</Dropdown.Item>
-                <Dropdown.Item eventKey="2">Dropdown link 2</Dropdown.Item>
-                </Dropdown.Menu>
-            </Dropdown>
-        )}
+                    <Dropdown.Menu align="end">
+                    <Dropdown.Item eventKey="1" onClick={handleSignOut}>Log Out</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
+            )}
         </div>
 
 
