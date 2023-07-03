@@ -1,0 +1,160 @@
+.panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.chunk{
+    /*background: radial-gradient(circle, rgba(var(--bs-light-rgb), 1), rgba(var(--bs-primary-rgb), 0.01));*/
+    background: linear-gradient(to top, rgba(var(--bs-light-rgb), 1) 3%, rgba(var(--bs-primary-rgb), 0.03) 50%);
+    background: white;
+}
+.logo{
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 1rem 0;
+}
+.sideNavButton{
+    text-align: center;
+    color: #1d2d44a6;
+    margin-bottom: 0;
+    font-size: 1.15rem;
+    font-weight: 400;
+    transition: all 0.15s;
+}
+.profilePic{
+    height: 40px;
+    width: 40px;
+}
+.sideNavButton i{
+    color: var(--bs-secondary);
+}
+.notAuthLogo{
+    margin: auto;
+}
+.name{
+    font-size: .9rem;
+}
+.removeBorder:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+.footerNavItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    transition: all 0.15s;
+}
+.footerNavItem:hover{
+    filter: brightness(1.5);
+    transition: all 0.15s;
+}
+@media (max-width: 767px) {
+    .footerNav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 50px;
+      box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    }
+  
+    .footerNavItem {
+      text-align: center;
+      font-size: 12px;
+    }
+  
+    .footerNavIcon {
+      color: #333;
+      font-size: 20px;
+    }
+    .logoContainer{
+        display: none;
+    }
+    .sideNavButton{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .signOut{
+        display: none !important;
+    }
+    .panel{
+        z-index: 100;
+        height: 0 !important;
+    }
+    .name{
+        display: none;
+    }
+    .container{
+      background-image:
+        radial-gradient(circle at 5% 15%, #90CC78 0.1rem, transparent 1rem),
+        radial-gradient(circle at 75% 50%, #1D2D44 1rem, transparent 2.5rem),
+        radial-gradient(circle at 40% 80%, #1D2D44 0.1rem, transparent 1rem);
+    }
+  }
+
+  .container {
+    background: white;
+    position: relative;
+    z-index: 10;
+    background-image:
+    radial-gradient(circle at 5% 15%, #90CC78 0.1rem, transparent 1rem),
+    radial-gradient(circle at 75% 20%, #1D2D44 1rem, transparent 2.5rem),
+    radial-gradient(circle at 40% 80%, #1D2D44 0.1rem, transparent 1rem);
+    background-repeat: no-repeat;
+    animation: move 50s ease-in-out infinite;
+  }
+
+
+  @keyframes move {
+    0% { background-size: 100% 100%; }
+    25%{ background-size: 93% 95%; }
+    35%{ background-size: 99% 90%; }
+    50% { background-size: 91% 99%; }
+    75% { background-size: 94% 90%; }
+    100% { background-size: 100% 100%; }
+  }
+  .container1 {
+    z-index: -1;
+    background: transparent;
+    background-image:
+    radial-gradient(circle at 70% 85%, #1D2D44 1rem, transparent 2.5rem),
+    radial-gradient(circle at 20% 90%, #1D2D44 0.3rem, transparent 1rem),
+    radial-gradient(circle at 13% 13%, #90CC78 0.7rem, transparent 2rem);
+    background-repeat: no-repeat;
+    animation: move2 70s ease-in-out infinite;
+  }
+
+  @keyframes move2 {
+    0% { background-size: 100% 100%; }
+    25%{ background-size: 95% 92%; }
+    35%{ background-size: 91% 97%; }
+    50% { background-size: 93% 99%; }
+    75% { background-size: 97% 93%; }
+    100% { background-size: 100% 100%; }
+  }
+
+  .background{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+  }
+
+  @media screen and (max-width: 767px) {
+    .container{
+      background-image:
+        radial-gradient(circle at 5% 15%, #90CC78 0.1rem, transparent 1rem),
+        radial-gradient(circle at 75% 50%, #1D2D44 1rem, transparent 2.5rem),
+        radial-gradient(circle at 40% 80%, #1D2D44 0.1rem, transparent 1rem);
+    }
+  }
